@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "eslint": "^7.0.0",
-    "jest": "^26.0.1"
+    "jest": "^26.0.1",
+    "jest-cli": "^26.0.1"
   }
 }
