@@ -20,7 +20,7 @@
   "homepage": "https://github.com/Hammad-401-advanced-javascript/note#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "minimist": "^1.2.5",
+    "minimist": "^1.2.5"
   },
   "devDependencies": {
     "eslint": "^7.0.0",
