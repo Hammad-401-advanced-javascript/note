@@ -9,17 +9,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ruwaid-401-advanced-javascript/notes.git"
+    "url": "git+https://github.com/Hammad-401-advanced-javascript/notes.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ruwaid-401-advanced-javascript/notes/issues"
+    "url": "https://github.com/Hammad-401-advanced-javascript/note/issues"
   },
-  "homepage": "https://github.com/ruwaid-401-advanced-javascript/notes#readme",
+  "homepage": "https://github.com/Hammad-401-advanced-javascript/note#readme",
   "dependencies": {
-    "minimist": "^1.2.5"
+    "dotenv": "^8.2.0",
+    "minimist": "^1.2.5",
   },
   "devDependencies": {
     "eslint": "^7.0.0",
