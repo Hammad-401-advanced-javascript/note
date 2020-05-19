@@ -1,4 +1,4 @@
-# LAB - Class 01
+# LAB - Class 02
 
 ## Project: note
 
@@ -23,4 +23,4 @@
 
 #### UML
 
-![UML Diagram](./assets/whiteBoard-class-01.jpg)
+![UML Diagram](./assets/whiteBoard-class-02.jpg)
