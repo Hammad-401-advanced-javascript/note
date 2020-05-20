@@ -3,10 +3,10 @@
 // new library required
 const mongoose = require('mongoose');
 
-const notes = mongoose.Schema({
+const myData = mongoose.Schema({
   text: { type: String, required: true },
   category: { type: String, required: true },
 });
 
 
-module.exports = mongoose.model('notes', notes);
+module.exports = mongoose.model('notes', myData);
