@@ -16,7 +16,7 @@ console.log('hii index');
 const arg = new Input();
 
 async function finalResult() {
-  // const arg = new Input();
+  const arg = new Input();
   const note = new Notes();
   await note.execute(arg);
   mongoose.disconnect();
