@@ -1,7 +1,11 @@
 'use strict';
+
+// from the export
+
 const Input = require('./lib/input');
 const Notes = require('./lib/notes');
 const mongoose = require('mongoose');
+
 
 
 const myData='mongodb://localhost:27017/Hammad';
