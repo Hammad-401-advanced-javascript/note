@@ -9,4 +9,4 @@ const myData = mongoose.Schema({
 });
 
 
-module.exports = mongoose.model('notes', myData);
+module.exports = mongoose.model('myData', myData);
