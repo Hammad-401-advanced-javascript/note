@@ -1,29 +1,35 @@
 'use strict';
 
-const model=require('./notes-schema.js').model;
+// const model=require('./notes-schema.js').model;
+const schema = require('./notes-schema');
+
 
 class Data {
   constructor(){}
-  create(obj) {
-    const newData = new model(obj);
-    return newData.save();
+
+
+  async get(category){
+    if(category){
+      return await schema.find({'category':category});
+    }else{
+      return await schema.find({});
+    }
+  }
+
+  async create(obj) {
+    let newData = new schema(obj);
+    return await newData.save();
   }
     
 
-  read(_id) {
-    if (_id) {
-      return model.findOne({ _id });
-    } else {
-      return model.find({});
-    }
+ 
+  async update(_id, obj) {
+    return await schema.findByIdAndUpdate(_id, {obj});
   }
-  update(_id, obj) {
-    return model.findByIdAndUpdate(_id, obj, { new: true });
-  }
-  delete(_id) {
-    return model.findByIdAndDelete(_id);
+  async delete(_id) {
+    return schema.findByIdAndDelete(_id);
   }
 }
 
 
-module.exports = new Data();
+module.exports = Data;

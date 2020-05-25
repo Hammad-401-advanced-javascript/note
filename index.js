@@ -13,7 +13,7 @@ mongoose.connect(myData, {
   useUnifiedTopology: true,
 });
 console.log('hii index');
-const arg = new Input();
+// const arg = new Input();
 
 async function finalResult() {
   const arg = new Input();
@@ -21,6 +21,6 @@ async function finalResult() {
   await note.execute(arg);
   mongoose.disconnect();
 }
-console.log('hello',arg);
+// console.log('hello',arg);
 finalResult();
 // plz check te pull request
