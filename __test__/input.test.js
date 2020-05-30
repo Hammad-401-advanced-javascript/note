@@ -6,8 +6,8 @@ describe('Input Module', ()=> {
 
   it('getMethods() with wrong input (when there is no method or invalid)', () =>{
     let options = new Input();
-    expect(options.getMethod('')).toEqual('Error: Write the note that you need to use');
-    expect(options.getMethod('-b')).toEqual('Error: Write the note that you need to use');
+    expect(options.getMethod('')).toEqual('Error: plz write your note here');
+    expect(options.getMethod('-b')).toEqual('Error: plz write your note here');
   });
 
   

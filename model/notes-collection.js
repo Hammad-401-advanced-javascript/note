@@ -18,13 +18,15 @@ class Data {
 
   async create(obj) {
     let newData = new schema(obj);
-    return await newData.save();
+    console.log('dataaaa',newData);
+    let save = await newData.save();
+    return save;
   }
     
 
  
-  async update(_id, obj) {
-    return await schema.findByIdAndUpdate(_id, {obj});
+  async update(_id, text) {
+    return await schema.findByIdAndUpdate(_id, {text});
   }
   async delete(_id) {
     return schema.findByIdAndDelete(_id);

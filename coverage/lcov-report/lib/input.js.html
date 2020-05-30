@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">63.16% </span>
+                <span class="strong">60% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>12/19</span>
+                <span class='fraction'>12/20</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">46.15% </span>
+                <span class="strong">53.85% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>12/26</span>
+                <span class='fraction'>14/26</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">63.16% </span>
+                <span class="strong">60% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>12/19</span>
+                <span class='fraction'>12/20</span>
             </div>
         
             
@@ -103,7 +103,10 @@
 <a name='L44'></a><a href='#L44'>44</a>
 <a name='L45'></a><a href='#L45'>45</a>
 <a name='L46'></a><a href='#L46'>46</a>
-<a name='L47'></a><a href='#L47'>47</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
@@ -116,33 +119,36 @@
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -164,27 +170,29 @@ class Input{
   
   getMethod(method){
     if (method.a || method.add){
-      return this.getNote(method.a || <span class="branch-1 cbranch-no" title="branch not covered" >method.add </span>, method.category);
+      return this.getNote(method.a || method.add , method.category);
     } <span class="missing-if-branch" title="if path not taken" >I</span>if (method.list){
 <span class="cstat-no" title="statement not covered" >      return { action: 'list', category: method.list };</span>
     } <span class="missing-if-branch" title="if path not taken" >I</span>if (method.delete) {
 <span class="cstat-no" title="statement not covered" >      return { action: 'delete', id: method.delete };}</span>
     <span class="missing-if-branch" title="if path not taken" >I</span>if(method.update || method.u){
-<span class="cstat-no" title="statement not covered" >      return this.updNote(method.m,method.u||method.update);</span>
+      // console.log('.m',method.m);
+<span class="cstat-no" title="statement not covered" >      return this.updNote(method._[0],method.u||method.update);</span>
     }
     else{ return 'Error: plz write your note here'; }
   }
   getNote(showNote =<span class="branch-0 cbranch-no" title="branch not covered" >'' </span>,myCategory){
-    <span class="missing-if-branch" title="if path not taken" >I</span>if (showNote === false &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >showNote != '')</span>{
-<span class="cstat-no" title="statement not covered" >      return { action: 'add', payload: showNote, category:myCategory };</span>
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (showNote !== true &amp;&amp; showNote !=''){
+      return { action: 'add', payload: showNote, category:myCategory };
 &nbsp;
     } 
     else { 
-      return 'Error: plz write your note here';
+<span class="cstat-no" title="statement not covered" >      return 'Error: plz write your note here';</span>
     }
   }
-&nbsp;
+  
 <span class="fstat-no" title="function not covered" >  up</span>dNote(showNote=<span class="branch-0 cbranch-no" title="branch not covered" >'',</span> id){
+<span class="cstat-no" title="statement not covered" >    console.log('show',showNote)</span>
 <span class="cstat-no" title="statement not covered" >    if(showNote !== false &amp;&amp; showNote!=''){</span>
 <span class="cstat-no" title="statement not covered" >      return { action: 'update', payload: showNote, id: id }; </span>
     }else{
@@ -193,6 +201,7 @@ class Input{
   }
   
 }
+// test the pull req after delete last one
 module.exports = Input;
 &nbsp;
 &nbsp;</pre></td></tr></table></pre>
@@ -202,7 +211,7 @@ module.exports = Input;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Mon May 25 2020 13:42:29 GMT+0300 (Eastern European Summer Time)
+                at Sat May 30 2020 18:56:46 GMT+0300 (Eastern European Summer Time)
             </div>
         </div>
         <script src="../prettify.js"></script>
