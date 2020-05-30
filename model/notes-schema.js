@@ -9,5 +9,5 @@ const myData = mongoose.Schema({
 });
 
 
-module.exports.schema=myData.obj;
+// module.exports.schema=myData.obj;
 module.exports = mongoose.model('myData', myData);
